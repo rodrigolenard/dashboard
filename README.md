@@ -12,9 +12,13 @@ Após acessar a pagina digite os comando abaixo, linha por linha dando 'enter' a
 
 rpi-rw
 
-cd /var/www/dashboard
+git clone https://github.com/rodrigolenard/dashboard.git /var/www/dashboard/dashboard
 
-git clone https://github.com/rodrigolenard/dashboard-pistar.git
+cd /var/www/dashboard/dashboard
+
+sudo unzip dashboard.zip
+
+sudo rm -rf dashboard.zip
 
 sudo chmod 777 /var/www/dashboard/dashboard
 
