@@ -1,5 +1,4 @@
 # Dashboard do Pi-Star
-Dashboard - Pi-Star
 
 Para instalação acesse seu dashboard com:
 http://pi-star.local/admin/expert/ssh
