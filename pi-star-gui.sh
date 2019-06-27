@@ -50,7 +50,7 @@ sudo sed -i 's/#autologin-user-timeout=0/autologin-user-timeout=0/g' /etc/lightd
 sudo chown -R pi-star:pi-star /home/pi-star/.config
 
 # Download and install dashboard
-git clone https://github.com/rodrigolenard/dashboard.git /var/www/dashboard/dashboard
+sudo git clone https://github.com/rodrigolenard/dashboard.git /var/www/dashboard/dashboard
 cd /var/www/dashboard/dashboard
 sudo unzip dashboard.zip
 sudo rm -rf dashboard.zip pi-star-gui.sh
