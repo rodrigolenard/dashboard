@@ -8,6 +8,9 @@
 sudo mount -o remount,rw /
 sudo mount -o remount,rw /boot
 
+# Fix broke
+sudo apt --fix-broken install
+
 # Update resources
 sudo apt-get update
 
