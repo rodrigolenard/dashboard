@@ -1,30 +1,33 @@
 #!/bin/bash
 #
 # Script to install WebBrowser on Pi-Star
-#         Modify by Rodrigo Lenard (PU7KRL)
+#   Modify by Rodrigo Lenard (PU7KRL)
 #
 
 # Remount root as writable
 sudo mount -o remount,rw /
 sudo mount -o remount,rw /boot
 
-# Fix broke
-sudo apt --fix-broken install
-
 # Update resources
-sudo apt-get update
+sudo apt-get update && sudo apt-get upgrade -y
 
 # Patch Library
 if [[ $(cut -c 1 /etc/debian_version) -eq 9 ]]; then
-	sudo apt-get install -y --reinstall libraspberrypi0 libraspberrypi-dev libraspberrypi-bin
+sudo apt-get install -y --reinstall libraspberrypi0 libraspberrypi-dev libraspberrypi-bin
 fi
 
 # Install GUI Interface and browser
 sudo apt-get install -y --no-install-recommends xserver-xorg
 sudo apt-get install -y --no-install-recommends xinit
-sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install -y raspberrypi-ui-mods
 sudo apt-get install -y lightdm
+
+# Download and install dashboard
+sudo git clone https://github.com/rodrigolenard/dashboard.git /var/www/dashboard/dashboard
+cd /var/www/dashboard/dashboard
+sudo unzip dashboard.zip
+sudo rm -rf dashboard.zip pi-star-gui.sh
+sudo chmod 777 /var/www/dashboard/dashboard
 
 # Install unclutter to remove the pointer
 sudo apt-get install -y unclutter chromium-browser
