@@ -4,9 +4,9 @@
 #         Modify by Rodrigo Lenard (PU7KRL)
 #
 
-# Remount root as writable partition
-sudo mount -o remount rw
-sudo mount -o remount rw /boot
+# Remount root as writable
+sudo mount -o remount,rw /
+sudo mount -o remount,rw /boot
 
 # Update resources
 sudo apt-get update
