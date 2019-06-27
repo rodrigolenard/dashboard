@@ -46,13 +46,6 @@ sudo sed -i 's/#autologin-user-timeout=0/autologin-user-timeout=0/g' /etc/lightd
 # Permission writable the .config dir
 sudo chown -R pi-star:pi-star /home/pi-star/.config
 
-# Install dashboard dir web
-sudo git clone https://github.com/rodrigolenard/dashboard.git /var/www/dashboard/dashboard
-cd /var/www/dashboard/dashboard
-sudo unzip dashboard.zip
-sudo rm -rf dashboard.zip
-sudo chmod 777 /var/www/dashboard/dashboard
-
 # Force the disk to be RW on boot
 sudo sed -i 's/mount -o remount,ro \///g' /etc/rc.local
 sudo reboot
