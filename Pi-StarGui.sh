@@ -8,10 +8,6 @@
 sudo mount -o remount,rw /
 sudo mount -o remount,rw /boot
 
-# Remove files not used
-sudo rm -rf dashboard.zip
-sudo rm -rf README.md
-
 # Update resources
 sudo apt-get update
 
