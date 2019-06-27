@@ -5,7 +5,7 @@
 #
 
 # Remount root as writable partition
-sudo mount -o remount,rw /
+sudo mount -o remount,rw
 sudo mount -o remount,rw /boot
 
 # Update resources
