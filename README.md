@@ -36,3 +36,6 @@ wget https://raw.githubusercontent.com/rodrigolenard/dashboard/master/pi-star-gu
 sudo chmod 777 pi-star-gui.sh
 
 ./pi-star-gui.sh
+
+Aguarde o processo de instalação que leva cerca de 25min...
+Após a instalção o dashboard será exibido na saída HDMI com suporte a mouse e teclado
