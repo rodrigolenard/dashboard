@@ -1,4 +1,4 @@
-# Dashboard do Pi-Star
+# Instalação somente do dashboard
 
 Para instalação acesse seu dashboard com:
 http://pi-star.local/admin/expert/ssh
@@ -25,3 +25,14 @@ rpi-ro
 
 Para acessar o novo dashboard acesse
 http://pi-star.local/dashboard or http://ENDEREÇO DE IP/dashboard
+
+
+# Instalação interface GUI + Dashboard
+
+rpi-rw
+
+wget https://raw.githubusercontent.com/rodrigolenard/dashboard/master/pi-star-gui.sh
+
+sudo chmod 777 pi-star-gui.sh
+
+./pi-star-gui.sh
