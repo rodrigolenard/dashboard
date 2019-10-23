@@ -5,7 +5,7 @@
 #
 
 # Usar todo o cartão
-sudo pistar-expand
+#sudo pistar-expand
 
 # Remonta em modo gravação
 sudo mount -o remount,rw /
